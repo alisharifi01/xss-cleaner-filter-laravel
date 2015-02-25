@@ -1,6 +1,9 @@
 {
     "name": "ali-sharifi/xss-cleaner-filter",
-    "description": "",
+    "type": "library",
+    "description": "additional laravel filter to prevent xss attack",
+    "keywords": ["laravel","xss","filter"],
+    "homepage": "http://github.com/alisharifi01/xss-cleaner-filter-laravel",
     "authors": [
         {
             "name": "ali sharifi",
@@ -13,7 +16,6 @@
     },
     "license": "MIT",
     "autoload": {
-        
         "psr-0": {
             "AliSharifi\\XssCleanerFilter\\": "src/"
         }
