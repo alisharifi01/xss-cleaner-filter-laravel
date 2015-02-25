@@ -1,7 +1,7 @@
 Laravel XSS FILTER
 ===========
 
-This package add ana dditional filter to prevent xss attack.
+This package add an additional filter to prevent xss attack.
 
 ### Installation
 
