@@ -13,6 +13,9 @@
     },
     "license": "MIT",
     "autoload": {
+        "classmap": [
+            "src"
+        ],
         "psr-0": {
             "AliSharifi\\XssCleanerFilter\\": "src/"
         }
