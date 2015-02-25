@@ -11,8 +11,8 @@
         "php": ">=5.3.0",
         "illuminate/support": "4.1.*"
     },
+    "license": "MIT",
     "autoload": {
-        
         "psr-0": {
             "AliSharifi\\XssCleanerFilter\\": "src/"
         }
