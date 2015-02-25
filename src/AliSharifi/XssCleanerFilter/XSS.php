@@ -3,24 +3,20 @@
 class XSS {
     public static function clean()
     {
-        // Recursive cleaning for array [] inputs, not just strings.
-        $sanitized = static::arrayStripTags(Input::get());
-        Input::merge($sanitized);
+        $cleaned = static::deleteTags(Input::get());
+        Input::merge($cleaned);
     }
-
-    public static function arrayStripTags($array)
+    public static function deleteTags($array)
     {
-        $result = array();
+        $out = array();
         foreach ($array as $key => $value) {
             $key = strip_tags($key);
             if (is_array($value)) {
-                $result[$key] = static::arrayStripTags($value);
+                $out[$key] = static::deleteTags($value);
             } else {
-                // I am using strip_tags(), you may use htmlentities(),
-                // also I am doing trim() here, you may remove it, if you wish.
-                $result[$key] = trim(strip_tags($value));
+                $out[$key] = trim(strip_tags($value));
             }
         }
-        return $result;
+        return $out;
     }
 } 
