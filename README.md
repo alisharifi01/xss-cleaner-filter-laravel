@@ -19,7 +19,7 @@ Then in your project root directory run :
 Then, include the following in the array on service providers in `config/app.php`:
 
 ```php
-"ali-sharifi/xss-cleaner-filter": "dev-master" ,
+'AliSharifi\XssCleanerFilter\XssCleanerFilterServiceProvider' ,
 ```
 
 ### Usage
